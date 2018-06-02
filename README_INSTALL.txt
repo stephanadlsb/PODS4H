@@ -1,0 +1,31 @@
+## 1) Agda installation
+(we are using '2.6.0-8cae647' but later versions should work)
+
+## 2a)  Agda standard lib installation
+(we are using version 55ad461aa4fc6cf22e97812b7ff8128b3c7a902c)
+
+## 2b)  be sure to set your 'agdalib' file correctly; see also:
+http://agda.readthedocs.io/en/v2.5.2/tools/package-system.html
+
+## 3) Install hackage 'sdl2' library
+##
+## For Ubuntu do this:
+## [for another linux version, exchange the "apt-get" command]
+sudo apt-get install libsdl2-dev
+cabal update
+cabal install sdl2
+
+## 4) Install hackage version of Rasterific
+##
+cabal update
+cabal install rasterific
+cabal install rasterific-svg
+
+## 5) In emacs open the file:
+##   './examples/GUI/BusinessProcessMedExVers10Compiled.agda'
+##   and use 'Agda->Compile' in emacs, 
+##   then choose 'GHC' as the backend.
+
+
+
+Small tip: Sometimes it helps removing the 'MAlonzo' directory and recompilling everything.
