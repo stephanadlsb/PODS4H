@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html><head><meta charset="utf-8"><title>GUI.BusinessProcessMedExPresentationLib</title><link rel="stylesheet" href="Agda.css"></head><body><pre><a id="1" class="Comment">-- \BusinessProcessMedExPresentationLib</a>
+
+<a id="42" class="Keyword">module</a> <a id="49" href="GUI.BusinessProcessMedExPresentationLib.html" class="Module">GUI.BusinessProcessMedExPresentationLib</a>   <a id="91" class="Keyword">where</a>
+
+<a id="98" class="Keyword">open</a> <a id="103" class="Keyword">import</a> <a id="110" href="Data.String.html" class="Module">Data.String</a>
+
+<a id="dischargePatientText"></a><a id="123" href="GUI.BusinessProcessMedExPresentationLib.html#123" class="Function">dischargePatientText</a> <a id="144" class="Symbol">:</a> <a id="146" href="Agda.Builtin.String.html#165" class="Postulate">String</a>
+<a id="153" href="GUI.BusinessProcessMedExPresentationLib.html#123" class="Function">dischargePatientText</a> <a id="174" class="Symbol">=</a> <a id="176" class="String">&quot;Discharge Patient&quot;</a>
+
+<a id="discussFollowupText"></a><a id="197" href="GUI.BusinessProcessMedExPresentationLib.html#197" class="Function">discussFollowupText</a> <a id="217" class="Symbol">:</a> <a id="219" href="Agda.Builtin.String.html#165" class="Postulate">String</a>
+<a id="226" href="GUI.BusinessProcessMedExPresentationLib.html#197" class="Function">discussFollowupText</a> <a id="246" class="Symbol">=</a> <a id="248" class="String">&quot;Disucss Follow-Up&quot;</a>
+
+<a id="prescribeWarfarinText"></a><a id="269" href="GUI.BusinessProcessMedExPresentationLib.html#269" class="Function">prescribeWarfarinText</a> <a id="291" class="Symbol">:</a> <a id="293" href="Agda.Builtin.String.html#165" class="Postulate">String</a>
+<a id="300" href="GUI.BusinessProcessMedExPresentationLib.html#269" class="Function">prescribeWarfarinText</a> <a id="322" class="Symbol">=</a> <a id="324" class="String">&quot;Prescribe warfarin&quot;</a>
+
+<a id="prescribeHeparinText"></a><a id="346" href="GUI.BusinessProcessMedExPresentationLib.html#346" class="Function">prescribeHeparinText</a> <a id="367" class="Symbol">:</a> <a id="369" href="Agda.Builtin.String.html#165" class="Postulate">String</a>
+<a id="376" href="GUI.BusinessProcessMedExPresentationLib.html#346" class="Function">prescribeHeparinText</a> <a id="397" class="Symbol">=</a> <a id="399" class="String">&quot;Prescribe Heparin&quot;</a>
+
+<a id="prescribeNOACText"></a><a id="420" href="GUI.BusinessProcessMedExPresentationLib.html#420" class="Function">prescribeNOACText</a> <a id="438" class="Symbol">:</a> <a id="440" href="Agda.Builtin.String.html#165" class="Postulate">String</a>
+<a id="447" href="GUI.BusinessProcessMedExPresentationLib.html#420" class="Function">prescribeNOACText</a> <a id="465" class="Symbol">=</a> <a id="467" class="String">&quot;Prescribe NOAC&quot;</a>
+
+
+<a id="lowDoseSelectionText"></a><a id="486" href="GUI.BusinessProcessMedExPresentationLib.html#486" class="Function">lowDoseSelectionText</a> <a id="507" class="Symbol">:</a> <a id="509" href="Agda.Builtin.String.html#165" class="Postulate">String</a>
+<a id="516" href="GUI.BusinessProcessMedExPresentationLib.html#486" class="Function">lowDoseSelectionText</a> <a id="537" class="Symbol">=</a> <a id="539" class="String">&quot;Low Dose&quot;</a>
+
+<a id="highDoseSelectionText"></a><a id="551" href="GUI.BusinessProcessMedExPresentationLib.html#551" class="Function">highDoseSelectionText</a> <a id="573" class="Symbol">:</a> <a id="575" href="Agda.Builtin.String.html#165" class="Postulate">String</a>
+<a id="582" href="GUI.BusinessProcessMedExPresentationLib.html#551" class="Function">highDoseSelectionText</a> <a id="604" class="Symbol">=</a> <a id="606" class="String">&quot;High Dose&quot;</a>
+
+<a id="medAText"></a><a id="619" href="GUI.BusinessProcessMedExPresentationLib.html#619" class="Function">medAText</a> <a id="628" class="Symbol">:</a> <a id="630" href="Agda.Builtin.String.html#165" class="Postulate">String</a>
+<a id="637" href="GUI.BusinessProcessMedExPresentationLib.html#619" class="Function">medAText</a> <a id="646" class="Symbol">=</a> <a id="648" class="String">&quot;Apixaban&quot;</a> <a id="659" class="Comment">-- &quot;Med A&quot;</a>
+
+<a id="medDText"></a><a id="671" href="GUI.BusinessProcessMedExPresentationLib.html#671" class="Function">medDText</a> <a id="680" class="Symbol">:</a> <a id="682" href="Agda.Builtin.String.html#165" class="Postulate">String</a>
+<a id="689" href="GUI.BusinessProcessMedExPresentationLib.html#671" class="Function">medDText</a> <a id="698" class="Symbol">=</a> <a id="700" class="String">&quot;Dabigatran&quot;</a> <a id="713" class="Comment">-- &quot;Med D&quot;</a>
+
+<a id="medEText"></a><a id="725" href="GUI.BusinessProcessMedExPresentationLib.html#725" class="Function">medEText</a> <a id="734" class="Symbol">:</a> <a id="736" href="Agda.Builtin.String.html#165" class="Postulate">String</a>
+<a id="743" href="GUI.BusinessProcessMedExPresentationLib.html#725" class="Function">medEText</a> <a id="752" class="Symbol">=</a> <a id="754" class="String">&quot;Edoxaban&quot;</a> <a id="765" class="Comment">-- Med E&quot;</a>
+
+<a id="medRText"></a><a id="776" href="GUI.BusinessProcessMedExPresentationLib.html#776" class="Function">medRText</a> <a id="785" class="Symbol">:</a> <a id="787" href="Agda.Builtin.String.html#165" class="Postulate">String</a>
+<a id="794" href="GUI.BusinessProcessMedExPresentationLib.html#776" class="Function">medRText</a> <a id="803" class="Symbol">=</a> <a id="805" class="String">&quot;Rivaroxaban&quot;</a> <a id="819" class="Comment">-- Med R&quot;</a>
+
+<a id="noMedicationText"></a><a id="830" href="GUI.BusinessProcessMedExPresentationLib.html#830" class="Function">noMedicationText</a> <a id="847" class="Symbol">:</a> <a id="849" href="Agda.Builtin.String.html#165" class="Postulate">String</a>
+<a id="856" href="GUI.BusinessProcessMedExPresentationLib.html#830" class="Function">noMedicationText</a> <a id="873" class="Symbol">=</a> <a id="875" class="String">&quot;No Medication&quot;</a>
+
+
+<a id="cardioVersionText"></a><a id="893" href="GUI.BusinessProcessMedExPresentationLib.html#893" class="Function">cardioVersionText</a> <a id="911" class="Symbol">:</a> <a id="913" href="Agda.Builtin.String.html#165" class="Postulate">String</a>
+<a id="920" href="GUI.BusinessProcessMedExPresentationLib.html#893" class="Function">cardioVersionText</a> <a id="938" class="Symbol">=</a> <a id="940" class="String">&quot;Cardioversion&quot;</a>
+
+<a id="paceMakerText"></a><a id="957" href="GUI.BusinessProcessMedExPresentationLib.html#957" class="Function">paceMakerText</a> <a id="971" class="Symbol">:</a> <a id="973" href="Agda.Builtin.String.html#165" class="Postulate">String</a>
+<a id="980" href="GUI.BusinessProcessMedExPresentationLib.html#957" class="Function">paceMakerText</a> <a id="994" class="Symbol">=</a> <a id="996" class="String">&quot;Pacemaker&quot;</a>
+
+<a id="conservativeText"></a><a id="1009" href="GUI.BusinessProcessMedExPresentationLib.html#1009" class="Function">conservativeText</a> <a id="1026" class="Symbol">:</a> <a id="1028" href="Agda.Builtin.String.html#165" class="Postulate">String</a>
+<a id="1035" href="GUI.BusinessProcessMedExPresentationLib.html#1009" class="Function">conservativeText</a> <a id="1052" class="Symbol">=</a> <a id="1054" class="String">&quot;Conservative&quot;</a>
+
+<a id="seriousText"></a><a id="1070" href="GUI.BusinessProcessMedExPresentationLib.html#1070" class="Function">seriousText</a> <a id="1082" class="Symbol">:</a> <a id="1084" href="Agda.Builtin.String.html#165" class="Postulate">String</a>
+<a id="1091" href="GUI.BusinessProcessMedExPresentationLib.html#1070" class="Function">seriousText</a> <a id="1103" class="Symbol">=</a> <a id="1105" class="String">&quot;serious&quot;</a>
+
+<a id="notSeriousText"></a><a id="1116" href="GUI.BusinessProcessMedExPresentationLib.html#1116" class="Function">notSeriousText</a> <a id="1131" class="Symbol">:</a> <a id="1133" href="Agda.Builtin.String.html#165" class="Postulate">String</a>
+<a id="1140" href="GUI.BusinessProcessMedExPresentationLib.html#1116" class="Function">notSeriousText</a> <a id="1155" class="Symbol">=</a> <a id="1157" class="String">&quot;not serious&quot;</a>
+
+
+<a id="diagnosisAtrialFibText"></a><a id="1173" href="GUI.BusinessProcessMedExPresentationLib.html#1173" class="Function">diagnosisAtrialFibText</a> <a id="1196" class="Symbol">:</a> <a id="1198" href="Agda.Builtin.String.html#165" class="Postulate">String</a>
+<a id="1205" href="GUI.BusinessProcessMedExPresentationLib.html#1173" class="Function">diagnosisAtrialFibText</a> <a id="1228" class="Symbol">=</a> <a id="1230" class="String">&quot;Diagnosis (AF)&quot;</a>
+
+<a id="createnineClearanceText"></a><a id="1248" href="GUI.BusinessProcessMedExPresentationLib.html#1248" class="Function">createnineClearanceText</a> <a id="1272" class="Symbol">:</a> <a id="1274" href="Agda.Builtin.String.html#165" class="Postulate">String</a>
+<a id="1281" href="GUI.BusinessProcessMedExPresentationLib.html#1248" class="Function">createnineClearanceText</a> <a id="1305" class="Symbol">=</a> <a id="1307" class="String">&quot;Enter Createnine Clearance&quot;</a>
+
+<a id="serumCreatenineText"></a><a id="1337" href="GUI.BusinessProcessMedExPresentationLib.html#1337" class="Function">serumCreatenineText</a> <a id="1357" class="Symbol">:</a> <a id="1359" href="Agda.Builtin.String.html#165" class="Postulate">String</a>
+<a id="1366" href="GUI.BusinessProcessMedExPresentationLib.html#1337" class="Function">serumCreatenineText</a> <a id="1386" class="Symbol">=</a> <a id="1388" class="String">&quot;Enter Serum Createnine (µmol/l)&quot;</a>
+
+<a id="drawBloodText"></a><a id="1423" href="GUI.BusinessProcessMedExPresentationLib.html#1423" class="Function">drawBloodText</a> <a id="1437" class="Symbol">:</a> <a id="1439" href="Agda.Builtin.String.html#165" class="Postulate">String</a>
+<a id="1446" href="GUI.BusinessProcessMedExPresentationLib.html#1423" class="Function">drawBloodText</a> <a id="1460" class="Symbol">=</a> <a id="1462" class="String">&quot;Draw blood&quot;</a>
+
+<a id="pulseText"></a><a id="1476" href="GUI.BusinessProcessMedExPresentationLib.html#1476" class="Function">pulseText</a> <a id="1486" class="Symbol">:</a> <a id="1488" href="Agda.Builtin.String.html#165" class="Postulate">String</a>
+<a id="1495" href="GUI.BusinessProcessMedExPresentationLib.html#1476" class="Function">pulseText</a> <a id="1505" class="Symbol">=</a> <a id="1507" class="String">&quot;Enter Pulse&quot;</a>
+
+<a id="ECGtext"></a><a id="1522" href="GUI.BusinessProcessMedExPresentationLib.html#1522" class="Function">ECGtext</a> <a id="1530" class="Symbol">:</a> <a id="1532" href="Agda.Builtin.String.html#165" class="Postulate">String</a>
+<a id="1539" href="GUI.BusinessProcessMedExPresentationLib.html#1522" class="Function">ECGtext</a> <a id="1547" class="Symbol">=</a> <a id="1549" class="String">&quot;ECG&quot;</a>
+
+<a id="hasBledText"></a><a id="1556" href="GUI.BusinessProcessMedExPresentationLib.html#1556" class="Function">hasBledText</a> <a id="1568" class="Symbol">:</a> <a id="1570" href="Agda.Builtin.String.html#165" class="Postulate">String</a>
+<a id="1577" href="GUI.BusinessProcessMedExPresentationLib.html#1556" class="Function">hasBledText</a> <a id="1589" class="Symbol">=</a> <a id="1591" class="String">&quot;Enter HASBLED score (0 - 9)&quot;</a>
+
+<a id="chadDsVasText"></a><a id="1622" href="GUI.BusinessProcessMedExPresentationLib.html#1622" class="Function">chadDsVasText</a> <a id="1636" class="Symbol">:</a> <a id="1638" href="Agda.Builtin.String.html#165" class="Postulate">String</a>
+<a id="1645" href="GUI.BusinessProcessMedExPresentationLib.html#1622" class="Function">chadDsVasText</a> <a id="1659" class="Symbol">=</a> <a id="1661" class="String">&quot;Enter CHA2DS2-VASc score (0 - 9)&quot;</a>
+
+<a id="fallRiskText"></a><a id="1697" href="GUI.BusinessProcessMedExPresentationLib.html#1697" class="Function">fallRiskText</a> <a id="1710" class="Symbol">:</a> <a id="1712" href="Agda.Builtin.String.html#165" class="Postulate">String</a>
+<a id="1719" href="GUI.BusinessProcessMedExPresentationLib.html#1697" class="Function">fallRiskText</a> <a id="1732" class="Symbol">=</a> <a id="1734" class="String">&quot;Enter Fall Risk (yes/no)&quot;</a>
+
+<a id="pgpText"></a><a id="1762" href="GUI.BusinessProcessMedExPresentationLib.html#1762" class="Function">pgpText</a> <a id="1770" class="Symbol">:</a> <a id="1772" href="Agda.Builtin.String.html#165" class="Postulate">String</a>
+<a id="1779" href="GUI.BusinessProcessMedExPresentationLib.html#1762" class="Function">pgpText</a> <a id="1787" class="Symbol">=</a> <a id="1789" class="String">&quot;Takes potent P-gp-inhibitor (yes/no)&quot;</a>
+
+<a id="ageText"></a><a id="1829" href="GUI.BusinessProcessMedExPresentationLib.html#1829" class="Function">ageText</a> <a id="1837" class="Symbol">:</a> <a id="1839" href="Agda.Builtin.String.html#165" class="Postulate">String</a>
+<a id="1846" href="GUI.BusinessProcessMedExPresentationLib.html#1829" class="Function">ageText</a> <a id="1854" class="Symbol">=</a> <a id="1856" class="String">&quot;Enter Age&quot;</a>
+
+<a id="wghtText"></a><a id="1869" href="GUI.BusinessProcessMedExPresentationLib.html#1869" class="Function">wghtText</a> <a id="1878" class="Symbol">:</a> <a id="1880" href="Agda.Builtin.String.html#165" class="Postulate">String</a>
+<a id="1887" href="GUI.BusinessProcessMedExPresentationLib.html#1869" class="Function">wghtText</a> <a id="1896" class="Symbol">=</a> <a id="1898" class="String">&quot;Enter Weight&quot;</a>
+</pre></body></html>

@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html><head><meta charset="utf-8"><title>GUI.LoadAllPODS4H</title><link rel="stylesheet" href="Agda.css"></head><body><pre><a id="1" class="Keyword">module</a> <a id="8" href="GUI.LoadAllPODS4H.html" class="Module">GUI.LoadAllPODS4H</a> <a id="26" class="Keyword">where</a>
+
+<a id="33" class="Comment">-- this file loads the files containing the code examples in the</a>
+<a id="98" class="Comment">-- PODS4H&#39;18 paper of Stephan Adelsberger, Claudio Di Ciccio,</a>
+<a id="160" class="Comment">--     Michael Gottsauner-Wolf, Vadim Savenkov,</a>
+<a id="208" class="Comment">--     Anton Setzer, Mark Warner</a>
+
+<a id="242" class="Comment">-- Abstract</a>
+<a id="254" class="Comment">-- 1. Introduction</a>
+<a id="273" class="Comment">-- 2. Case Study</a>
+<a id="290" class="Comment">-- 3. Appproach</a>
+<a id="306" class="Comment">-- 3.1 Implementation Overview</a>
+<a id="337" class="Comment">-- 3.2 NOAC Prescription Specification in Agda</a>
+
+<a id="385" class="Comment">-- Agda code defining Process</a>
+
+<a id="416" class="Keyword">open</a> <a id="421" class="Keyword">import</a> <a id="428" href="GUI.BusinessProcessVers3Paper.html" class="Module">GUI.BusinessProcessVers3Paper</a>
+
+<a id="459" class="Comment">-- Agda code defining discharge, naiveDoseSelection</a>
+
+<a id="512" class="Keyword">open</a> <a id="517" class="Keyword">import</a> <a id="524" href="GUI.BusinessProcessMedExVers6Paper.html" class="Module">GUI.BusinessProcessMedExVers6Paper</a>
+
+<a id="560" class="Comment">-- Agda code defining enterWeight etc  (same file)</a>
+
+<a id="612" class="Keyword">open</a> <a id="617" class="Keyword">import</a> <a id="624" href="GUI.BusinessProcessMedExVers6Paper.html" class="Module">GUI.BusinessProcessMedExVers6Paper</a>
+
+<a id="660" class="Comment">-- Agda code defining theoremWarfarin</a>
+
+<a id="699" class="Keyword">open</a> <a id="704" class="Keyword">import</a> <a id="711" href="GUI.BusinessProcessMedExVers7VerifUsingDecPaper.html" class="Module">GUI.BusinessProcessMedExVers7VerifUsingDecPaper</a>
+
+
+<a id="761" class="Comment">-- Full version simple (no check functions for user input, no</a>
+<a id="823" class="Comment">--                      button for going back to beginning at the end</a>
+<a id="893" class="Comment">--                      easier to understand</a>
+
+<a id="939" class="Comment">-- code for example</a>
+<a id="959" class="Keyword">open</a> <a id="964" class="Keyword">import</a> <a id="971" href="GUI.BusinessProcessMedExVers7Example.html" class="Module">GUI.BusinessProcessMedExVers7Example</a>
+<a id="1008" class="Comment">-- verification of example</a>
+<a id="1035" class="Keyword">open</a> <a id="1040" class="Keyword">import</a> <a id="1047" href="GUI.BusinessProcessMedExVers7VerifUsingDec.html" class="Module">GUI.BusinessProcessMedExVers7VerifUsingDec</a>
+<a id="1090" class="Comment">-- compiled code compile using agda-&gt;Compile chooose GHC as backend</a>
+<a id="1158" class="Keyword">open</a> <a id="1163" class="Keyword">import</a> <a id="1170" href="GUI.BusinessProcessMedExVers7Compiled.html" class="Module">GUI.BusinessProcessMedExVers7Compiled</a>
+
+
+
+<a id="1211" class="Comment">-- Full version with check functions for examples:</a>
+
+<a id="1263" class="Comment">-- code for example</a>
+<a id="1283" class="Keyword">open</a> <a id="1288" class="Keyword">import</a> <a id="1295" href="GUI.BusinessProcessMedExVers9Example.html" class="Module">GUI.BusinessProcessMedExVers9Example</a>
+<a id="1332" class="Comment">-- verification of example</a>
+<a id="1359" class="Keyword">open</a> <a id="1364" class="Keyword">import</a> <a id="1371" href="GUI.BusinessProcessMedExVers9VerifUsingDec.html" class="Module">GUI.BusinessProcessMedExVers9VerifUsingDec</a>
+<a id="1414" class="Comment">-- compiled code compile using agda-&gt;Compile chooose GHC as backend</a>
+<a id="1482" class="Keyword">open</a> <a id="1487" class="Keyword">import</a> <a id="1494" href="GUI.BusinessProcessMedExVers9Compiled.html" class="Module">GUI.BusinessProcessMedExVers9Compiled</a>
+
+
+<a id="1534" class="Comment">-- Full version with check functions for examples and</a>
+<a id="1588" class="Comment">--    going back button at the end</a>
+
+<a id="1624" class="Comment">-- code for example</a>
+<a id="1644" class="Keyword">open</a> <a id="1649" class="Keyword">import</a> <a id="1656" href="GUI.BusinessProcessMedExVers10Example.html" class="Module">GUI.BusinessProcessMedExVers10Example</a>
+<a id="1694" class="Comment">-- compiled code compile using agda-&gt;Compile chooose GHC as backend</a>
+<a id="1762" class="Keyword">open</a> <a id="1767" class="Keyword">import</a> <a id="1774" href="GUI.BusinessProcessMedExVers10Compiled.html" class="Module">GUI.BusinessProcessMedExVers10Compiled</a>
+
+<a id="1814" class="Comment">-- 4. Evaluation and Future Work</a>
+<a id="1847" class="Comment">-- 5. Related Work</a>
+<a id="1866" class="Comment">-- 6. Conclusion</a>
+<a id="1883" class="Comment">--</a>
+</pre></body></html>
