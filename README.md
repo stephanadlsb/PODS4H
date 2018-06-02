@@ -19,5 +19,5 @@ Vadim Savenkov, Anton Setzer, and Mark Warner
 Refer to 'README_INSTALL.txt' for installation instructions.
 
 ---
-![screencast](NOT YET)
+![screencast](http://www.cs.swan.ac.uk/~csetzer/transfer/pods4h18ujm3Hbsr5i/Screencast-Executable-Process.gif)
 
