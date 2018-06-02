@@ -1,5 +1,5 @@
-# Interface Generation and Verification for Healthcare Processes:
-## A Case Study on Anticoagulant Prescriptions
+## Interface Generation and Verification for Healthcare Processes:
+### A Case Study on Anticoagulant Prescriptions
 
 
 Files Used in the article submitted to PODS4H'18 by Stephan Adelsberger, Claudio Di Ciccio, Michael Gottsauner-Wolf,
