@@ -15,7 +15,8 @@ Vadim Savenkov, Anton Setzer, and Mark Warner
   [html](/html/)
 3. The above files can be viewed with a *Browser* via the following link:
    [GUI.LoadAllPODS4H18.html](http://www.cs.swan.ac.uk/~csetzer/transfer/ppdp18Temporary8jqm7tRs/GUI.LoadAllPODS4H18.html)
-4. README_INSTALL.txt – for installation instructions
+   
+Refer to 'README_INSTALL.txt' for installation instructions.
 
 ---
 ![screencast](NOT YET)
