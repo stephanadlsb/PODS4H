@@ -10,7 +10,7 @@ Vadim Savenkov, Anton Setzer, and Mark Warner
 0. All Agda Code
   [agda](/agda/)
 1. Start file loading all files of the paper by chapter:
-  [LoadAllPODS4H18.agda](/agda/examples/GUI/LoadAllPODS4H18.agda)
+  [LoadAllPODS4H18.agda](/agda/examples/GUI/LoadAllPODS4H.agda)
 2. Html version of Agda code (no Agda installation needed)
   [html](/html/)
 3. The above files can be viewed with a *Browser* via the following link:
