@@ -6,7 +6,8 @@ open import  heap.libraryNat
 
 open import Data.Nat
 open import Data.Bool
-open import Data.String renaming (_==_ to _==Str_)
+open import Data.String
+open import lib.libraryString
 
 -- for business process in PPCP'18 paper
 
@@ -65,5 +66,5 @@ data FallRisk : Set where
   fallRisk noFallRisk : FallRisk
 
 patientHist2FallRisk : String → FallRisk
-patientHist2FallRisk str = if primStringEquality str "yes" then fallRisk
+patientHist2FallRisk str = if str ==Str "yes" then fallRisk
                            else noFallRisk

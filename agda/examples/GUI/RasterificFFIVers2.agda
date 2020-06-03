@@ -3,7 +3,7 @@ module GUI.RasterificFFIVers2 where
 open import Data.String.Base
 open import Data.List.Base
 open import Data.Unit.Base
-open import Data.Maybe
+open import Data.Maybe hiding ( _>>=_ )
 open import Data.Nat
 open import Data.Product
 
@@ -99,13 +99,3 @@ postulate
 
 renderFrameToScreenFFI : SDLWindow → Frame → IO Unit
 renderFrameToScreenFFI win fr = renderFrameToScreenFFIhs win (frame2FFI fr)
-
-
-
-
-
-
-
-
-
-

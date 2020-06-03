@@ -12,7 +12,7 @@ open import Data.Product
 open import Data.Bool
 open import Data.Nat
 --open import Data.Nat.Show renaming (show to showNat)
-open import Data.Maybe.Base
+open import Data.Maybe hiding ( _>>=_ )
 
 open import Data.Product
 open import Function

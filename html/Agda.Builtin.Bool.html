@@ -1,18 +1,19 @@
 <!DOCTYPE HTML>
-<html><head><meta charset="utf-8"><title>Agda.Builtin.Bool</title><link rel="stylesheet" href="Agda.css"></head><body><pre><a id="1" class="Symbol">{-#</a> <a id="5" class="Keyword">OPTIONS</a> <a id="13" class="Option">--without-K</a> <a id="25" class="Symbol">#-}</a>
+<html><head><meta charset="utf-8"><title>Agda.Builtin.Bool</title><link rel="stylesheet" href="Agda.css"></head><body><pre class="Agda"><a id="1" class="Symbol">{-#</a> <a id="5" class="Keyword">OPTIONS</a> <a id="13" class="Pragma">--without-K</a> <a id="25" class="Pragma">--safe</a> <a id="32" class="Pragma">--no-universe-polymorphism</a>
+            <a id="71" class="Pragma">--no-sized-types</a> <a id="88" class="Pragma">--no-guardedness</a>  <a id="106" class="Pragma">--no-subtyping</a> <a id="121" class="Symbol">#-}</a>
 
-<a id="30" class="Keyword">module</a> <a id="37" href="Agda.Builtin.Bool.html" class="Module">Agda.Builtin.Bool</a> <a id="55" class="Keyword">where</a>
+<a id="126" class="Keyword">module</a> <a id="133" href="Agda.Builtin.Bool.html" class="Module">Agda.Builtin.Bool</a> <a id="151" class="Keyword">where</a>
 
-<a id="62" class="Keyword">data</a> <a id="Bool"></a><a id="67" href="Agda.Builtin.Bool.html#67" class="Datatype">Bool</a> <a id="72" class="Symbol">:</a> <a id="74" class="PrimitiveType">Set</a> <a id="78" class="Keyword">where</a>
-  <a id="Bool.false"></a><a id="86" href="Agda.Builtin.Bool.html#86" class="InductiveConstructor">false</a> <a id="Bool.true"></a><a id="92" href="Agda.Builtin.Bool.html#92" class="InductiveConstructor">true</a> <a id="97" class="Symbol">:</a> <a id="99" href="Agda.Builtin.Bool.html#67" class="Datatype">Bool</a>
+<a id="158" class="Keyword">data</a> <a id="Bool"></a><a id="163" href="Agda.Builtin.Bool.html#163" class="Datatype">Bool</a> <a id="168" class="Symbol">:</a> <a id="170" href="Agda.Primitive.html#326" class="Primitive">Set</a> <a id="174" class="Keyword">where</a>
+  <a id="Bool.false"></a><a id="182" href="Agda.Builtin.Bool.html#182" class="InductiveConstructor">false</a> <a id="Bool.true"></a><a id="188" href="Agda.Builtin.Bool.html#188" class="InductiveConstructor">true</a> <a id="193" class="Symbol">:</a> <a id="195" href="Agda.Builtin.Bool.html#163" class="Datatype">Bool</a>
 
-<a id="105" class="Symbol">{-#</a> <a id="109" class="Keyword">BUILTIN</a> BOOL  <a id="123" href="Agda.Builtin.Bool.html#67" class="Datatype">Bool</a>  <a id="129" class="Symbol">#-}</a>
-<a id="133" class="Symbol">{-#</a> <a id="137" class="Keyword">BUILTIN</a> FALSE <a id="151" href="Agda.Builtin.Bool.html#86" class="InductiveConstructor">false</a> <a id="157" class="Symbol">#-}</a>
-<a id="161" class="Symbol">{-#</a> <a id="165" class="Keyword">BUILTIN</a> TRUE  <a id="179" href="Agda.Builtin.Bool.html#92" class="InductiveConstructor">true</a>  <a id="185" class="Symbol">#-}</a>
+<a id="201" class="Symbol">{-#</a> <a id="205" class="Keyword">BUILTIN</a> <a id="213" class="Keyword">BOOL</a>  <a id="219" href="Agda.Builtin.Bool.html#163" class="Datatype">Bool</a>  <a id="225" class="Symbol">#-}</a>
+<a id="229" class="Symbol">{-#</a> <a id="233" class="Keyword">BUILTIN</a> <a id="241" class="Keyword">FALSE</a> <a id="247" href="Agda.Builtin.Bool.html#182" class="InductiveConstructor">false</a> <a id="253" class="Symbol">#-}</a>
+<a id="257" class="Symbol">{-#</a> <a id="261" class="Keyword">BUILTIN</a> <a id="269" class="Keyword">TRUE</a>  <a id="275" href="Agda.Builtin.Bool.html#188" class="InductiveConstructor">true</a>  <a id="281" class="Symbol">#-}</a>
 
-<a id="190" class="Symbol">{-#</a> <a id="194" class="Keyword">COMPILE</a> UHC <a id="206" href="Agda.Builtin.Bool.html#67" class="Datatype">Bool</a> = data __BOOL__ (__FALSE__ | __TRUE__) <a id="250" class="Symbol">#-}</a>
+<a id="286" class="Symbol">{-#</a> <a id="290" class="Keyword">COMPILE</a> <a id="298" class="Keyword">UHC</a> <a id="302" href="Agda.Builtin.Bool.html#163" class="Datatype">Bool</a> <a id="307" class="Pragma">=</a> <a id="309" class="Pragma">data</a> <a id="314" class="Pragma">__BOOL__</a> <a id="323" class="Pragma">(__FALSE__</a> <a id="334" class="Pragma">|</a> <a id="336" class="Pragma">__TRUE__)</a> <a id="346" class="Symbol">#-}</a>
 
-<a id="255" class="Symbol">{-#</a> <a id="259" class="Keyword">COMPILE</a> JS <a id="270" href="Agda.Builtin.Bool.html#67" class="Datatype">Bool</a>  = function (x,v) { return ((x)? v[&quot;true&quot;]() : v[&quot;false&quot;]()); } <a id="339" class="Symbol">#-}</a>
-<a id="343" class="Symbol">{-#</a> <a id="347" class="Keyword">COMPILE</a> JS <a id="358" href="Agda.Builtin.Bool.html#86" class="InductiveConstructor">false</a> = false <a id="372" class="Symbol">#-}</a>
-<a id="376" class="Symbol">{-#</a> <a id="380" class="Keyword">COMPILE</a> JS <a id="391" href="Agda.Builtin.Bool.html#92" class="InductiveConstructor">true</a>  = true  <a id="405" class="Symbol">#-}</a>
+<a id="351" class="Symbol">{-#</a> <a id="355" class="Keyword">COMPILE</a> <a id="363" class="Keyword">JS</a> <a id="366" href="Agda.Builtin.Bool.html#163" class="Datatype">Bool</a>  <a id="372" class="Pragma">=</a> <a id="374" class="Pragma">function</a> <a id="383" class="Pragma">(x,v)</a> <a id="389" class="Pragma">{</a> <a id="391" class="Pragma">return</a> <a id="398" class="Pragma">((x)?</a> <a id="404" class="Pragma">v[&quot;true&quot;]()</a> <a id="416" class="Pragma">:</a> <a id="418" class="Pragma">v[&quot;false&quot;]());</a> <a id="433" class="Pragma">}</a> <a id="435" class="Symbol">#-}</a>
+<a id="439" class="Symbol">{-#</a> <a id="443" class="Keyword">COMPILE</a> <a id="451" class="Keyword">JS</a> <a id="454" href="Agda.Builtin.Bool.html#182" class="InductiveConstructor">false</a> <a id="460" class="Pragma">=</a> <a id="462" class="Pragma">false</a> <a id="468" class="Symbol">#-}</a>
+<a id="472" class="Symbol">{-#</a> <a id="476" class="Keyword">COMPILE</a> <a id="484" class="Keyword">JS</a> <a id="487" href="Agda.Builtin.Bool.html#188" class="InductiveConstructor">true</a>  <a id="493" class="Pragma">=</a> <a id="495" class="Pragma">true</a>  <a id="501" class="Symbol">#-}</a>
 </pre></body></html>

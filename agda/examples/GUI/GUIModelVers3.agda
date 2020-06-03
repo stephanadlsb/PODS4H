@@ -18,6 +18,7 @@ open import Data.Product
 open import Data.Nat
 open import Data.Fin
 open import Data.String
+open import lib.libraryString
 open import Data.Unit
 open import Data.Maybe
 open import Size
@@ -333,20 +334,20 @@ frameProp2StateProp f (state g (started m pr)) = false
 -- decide whether frame is a  frame
 -- consisting of a single button with label str and no other elements only
 frameIsSimpleText : String → Frame → Bool
-frameIsSimpleText str (addButton str' emptyframe) =  primStringEquality str str'
+frameIsSimpleText str (addButton str' emptyframe) =  str ==Str str'
 frameIsSimpleText str fr = false
 
 frameIsXorWithTexts : (str1 str2 : String) → Frame → Bool
 frameIsXorWithTexts str1 str2 (addButton str1' (addButton str2' emptyframe))
-                         =  primStringEquality str1 str1'
-                            ∧ primStringEquality str2 str2'
+                         =  str1 ==Str str1'
+                            ∧ str2 ==Str str2'
 frameIsXorWithTexts str str2 fr = false
 
 -- property that the frame doesn't not contain a button with a
 --  specific string
 frameDoesNotContainTextButton : String → Frame → Bool
 frameDoesNotContainTextButton str emptyFrame = true
-frameDoesNotContainTextButton str (addButton btnStr fr) = not (primStringEquality str btnStr) ∧ frameDoesNotContainTextButton str fr
+frameDoesNotContainTextButton str (addButton btnStr fr) = not ( str ==Str btnStr) ∧ frameDoesNotContainTextButton str fr
 frameDoesNotContainTextButton str (addLabel x fr) = frameDoesNotContainTextButton str fr
 frameDoesNotContainTextButton str (addTextbox x fr) = frameDoesNotContainTextButton str fr
 
@@ -384,7 +385,7 @@ ifFrameIsSmplTxt1NextIsSmplTxt2aux2 str2 (return' g) = frameIsSimpleText str2 (g
 ifFrameIsSmplTxt1NextIsSmplTxt2aux1 : (str1 str2 : String)
             (fr : Frame)
             (m  : GUIObj fr) → Bool
-ifFrameIsSmplTxt1NextIsSmplTxt2aux1 str1 str2 (addButton str3 emptyFrame) hand = not (primStringEquality str1 str2) ∨ ifFrameIsSmplTxt1NextIsSmplTxt2aux2 str2 (hand {∞} ( zero , tt ))
+ifFrameIsSmplTxt1NextIsSmplTxt2aux1 str1 str2 (addButton str3 emptyFrame) hand = not ( str1 ==Str str2) ∨ ifFrameIsSmplTxt1NextIsSmplTxt2aux2 str2 (hand {∞} ( zero , tt ))
 ifFrameIsSmplTxt1NextIsSmplTxt2aux1 str1 str2 fr m = true
 
 test = emptyFrame

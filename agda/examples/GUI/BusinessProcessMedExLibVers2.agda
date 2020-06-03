@@ -6,7 +6,8 @@ open import  heap.libraryNat
 
 open import Data.Nat
 open import Data.Bool
-open import Data.String renaming (_==_ to _==Str_)
+open import Data.String
+open import lib.libraryString
 
 -- for business process in PODS4H'18 paper
 
@@ -134,7 +135,7 @@ data FallRisk : Set where
   fallRisk noFallRisk : FallRisk
 
 patientHist2FallRisk : String → FallRisk
-patientHist2FallRisk str = if primStringEquality str "yes" then fallRisk
+patientHist2FallRisk str = if str ==Str "yes" then fallRisk
                            else noFallRisk
 
 -- HAS-BLED
@@ -225,7 +226,7 @@ data P-gpInhibitCat : Set where
    P-gpInhibitYes P-gpInhibitNo : P-gpInhibitCat
 
 str2P-gpInhibitCat : String → P-gpInhibitCat
-str2P-gpInhibitCat str = if primStringEquality str "yes" then P-gpInhibitYes
+str2P-gpInhibitCat str = if str ==Str "yes" then P-gpInhibitYes
                            else P-gpInhibitNo
 
 

@@ -1,6 +1,7 @@
 module heap.libraryNatPart2 where
 
 open import Data.String
+open import lib.libraryString
 open import Data.Char
 open import Data.Product
 open import Data.Bool
@@ -11,7 +12,7 @@ open import heap.libraryNat
 open import heap.libraryVec
 
 checkCharIsDigit : Char → Bool
-checkCharIsDigit c = 48 ≦ℕb toNat c ∧ (toNat c ≦ℕb 57)
+checkCharIsDigit c = 48 ≦ℕb toℕ c ∧ (toℕ c ≦ℕb 57)
 
 checkCharListIsNum : List Char → Bool
 checkCharListIsNum [] = true
@@ -21,10 +22,10 @@ checkStrIsNum : String → Bool
 checkStrIsNum str = checkCharListIsNum (primStringToList str)
 
 checkStrIsTrueFalse : String → Bool
-checkStrIsTrueFalse str = primStringEquality str "true" ∨ primStringEquality str "false"
+checkStrIsTrueFalse str = str ==Str "true" ∨ str ==Str "false"
 
 checkStrIsYesNo : String → Bool
-checkStrIsYesNo str = primStringEquality str "yes" ∨ primStringEquality str "no"
+checkStrIsYesNo str = str ==Str "yes" ∨ str ==Str "no"
 
 
 

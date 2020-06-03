@@ -11,7 +11,8 @@ open import Data.Bool
 open import Data.Unit
 open import Data.Maybe
 open import Size
-open import Relation.Nullary
+open import Relation.Nullary using ( ¬_ )
+open import lib.libraryDec
 open import Data.Fin renaming (_+_ to _+fin_)
 open import SizedIO.Base renaming (IO to IO∞; IO' to IO)
 open import GUI.BusinessProcessVers3

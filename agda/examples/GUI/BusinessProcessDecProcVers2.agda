@@ -13,7 +13,8 @@ open import Data.Bool
 open import Data.Unit
 open import Data.Maybe
 open import Size
-open import Relation.Nullary
+open import Relation.Nullary using ( ¬_ )
+open import lib.libraryDec
 open import Data.Fin renaming (_+_ to _+fin_)
 open import SizedIO.Base renaming (IO to IO∞; IO' to IO)
 open import GUI.BusinessProcessVers4
@@ -39,6 +40,8 @@ mutual
   decBusProc Q (activitySilent p)  =  decBusProc Q p
   decBusProc Q p with (bool2Dec (Q (businessProcessDec2GuiState p)))
   ... | yes p' = just (hasReached p')
+  decBusProc Q (startEvent x p) | no ¬p = nothing
+  decBusProc Q (startEventSilent p) | no ¬p = nothing
   decBusProc Q (endEvent x) | no ¬p = nothing
   decBusProc Q (xor x) | no ¬p = decBusProcaux5 Q x (decBusProcaux4 Q x)
   decBusProc Q (activitySilent p) | no ¬p = decBusProc Q p

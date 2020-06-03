@@ -2,13 +2,14 @@ module heap.libraryNat where
 
 open import Data.Nat renaming (_⊔_ to _⊔n_; _≟_ to _≟ℕ_) hiding ( _<_ )
 open import Data.Bool
-open import Data.Fin hiding (pred ; _+_)
+open import Data.Fin hiding (pred ; _+_ ;  toℕ )
 open import Data.Unit
 open import Data.Empty
 open import Function
 open import Relation.Nullary
 open import Relation.Binary.PropositionalEquality
 open import Data.String
+open import lib.libraryString
 open import Data.Char
 open import Data.List
 open import Data.List.Base
@@ -227,7 +228,7 @@ leqEmbedLem P l (suc n) zero () p
 leqEmbedLem P l (suc n) (suc m) nm p = leqEmbedLem (P ∘ suc) (l ∘ suc) n m nm p
 
 chr2NatDenotedNonMaybe : Char → ℕ
-chr2NatDenotedNonMaybe c = toNat c ∸ 48
+chr2NatDenotedNonMaybe c = toℕ c ∸ 48
 
 -- reverse
 

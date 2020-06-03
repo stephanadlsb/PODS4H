@@ -4,11 +4,11 @@ open import Data.Bool.Base
 open import Data.Bool
 open import Data.Nat
 open import Data.Unit hiding (_≤_; _≤?_)
-open import Relation.Nullary
+open import Relation.Nullary using ( ¬_ )
+open import lib.libraryDec
 open import Relation.Binary.PropositionalEquality
 open import Data.Empty
 open import Level
-open import Relation.Nullary
 open import Data.Bool.Base renaming (T to IsTrue)
 
 ifthenelseLemma1 : ∀ {σ} {τ} {α} → (A : Set σ ) → (P : A → Set τ )  → (Q : Set α)

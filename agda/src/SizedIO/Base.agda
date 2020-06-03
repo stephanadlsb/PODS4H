@@ -1,7 +1,7 @@
 
 module SizedIO.Base where
 
-open import Data.Maybe.Base
+open import Data.Maybe hiding ( _>>=_ )
 open import Data.Sum renaming (inj₁ to left; inj₂ to right; [_,_]′ to either)
 
 open import Function
